@@ -1,0 +1,5 @@
+#This is a htaccess file
+
+RewriteEngine On	#The Server Engine is turned on
+
+DirectoryIndex index.php	#Setting a file to be the index file.

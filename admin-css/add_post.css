@@ -1,0 +1,62 @@
+body {
+    margin-top: 30px;
+    background-color: rgb(204, 231, 255);
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.article_category {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+input[submit] {
+    font-size: 30px;
+}
+
+#header {
+    text-align: center;
+    padding-bottom: 20px;
+    width: auto;
+    height: auto;
+    /* border-bottom: 2px solid black; */
+}
+
+#h-nav {
+    height: 40px;
+    width: auto;
+    /* border-top: 2px solid black; */
+    /* padding-top: 10px; */
+}
+
+#greetings {
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#dashboard-link {
+    float: left;
+    margin-left: 50px;
+    /* padding: 10px; */
+}
+
+#dashboard-link a {
+    padding: 10px;
+}
