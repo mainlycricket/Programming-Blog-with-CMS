@@ -14,7 +14,7 @@
     if($post = mysqli_query($conn, $sql_delete)) {
         
         echo "Post deleted";
-        header('location: draft_posts.php');
+        header('location: drafts');
 
     }
 

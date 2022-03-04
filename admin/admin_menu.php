@@ -3,51 +3,45 @@
           <ul>
 
             <li>
-              <a href = "index.php">Dashboard</a>
+              <a href = "dashboard">Dashboard</a>
             </li>
 
             <li>
-              <a href = "published_posts.php">Published</a>
+              <a href = "published">Published</a>
             </li>
 
             <li>
-              <a href = "add_post.php">Add New</a>
+              <a href = "add_post">Add New</a>
             </li>
 
             <li>
-              <a href = "pending_posts.php">Pending</a>
+              <a href = "pending">Pending</a>
             </li>
 
             <li>
-              <a href = "draft_posts.php">Drafts</a>
+              <a href = "drafts">Drafts</a>
             </li>
 
             <li>
-              <a href = "deleted_posts.php">Trash</a>
+              <a href = "trash">Trash</a>
             </li>
 
             <?php if($_SESSION['author_role'] == 'admin'): ?>
 
             <?php echo
               "<li>".
-                "<a href = 'add_writer.php'>"."Add Writer"."</a>".
+                "<a href = 'add_author'>"."Add Writer"."</a>".
               "</li>"; 
-            ?>
-
-            <?php endif; ?>
-
-            <?php if($_SESSION['author_role'] == 'admin'): ?>
-
-            <?php echo
-              "<li>".
-                "<a href = 'add_category.php'>"."Add Category"."</a>".
+           
+              echo "<li>".
+                "<a href = 'add_subject'>"."Add Category"."</a>".
               "</li>"; 
             ?>
 
             <?php endif; ?>
 
             <li>
-              <a href = "logout.php">Logout</a>
+              <a href = "logout">Logout</a>
             </li>
 
           </ul>    

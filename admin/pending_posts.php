@@ -3,7 +3,7 @@
   session_start();
 
   if(!isset($_SESSION['author_email'])) {
-    header('location:../login.php');
+    header('location:../login');
     exit;
   }
 
@@ -42,7 +42,7 @@
           </div>
 
           <div id = "logout">
-          <a href = "logout.php"><i class="fa fa-power-off" aria-hidden="true" style = "color: red;"></i></a>
+          <a href = "logout"><i class="fa fa-power-off" aria-hidden="true" style = "color: red;"></i></a>
           </div>
 
           <div id = "greetings">
@@ -95,10 +95,10 @@ if($post = mysqli_query($conn, $sql)) {
             echo "<tr scope = 'row'>";
             echo "<td>".$row['id']."</td>";
             echo "<td>".$row['title']."<br/>".
-            "<a href = 'edit_post.php?id={$row['id']}'>Edit Post</a>&emsp;".
-            "<a href = 'delete_post.php?id={$row['id']}'>"."Delete Post"."</a>&emsp;";
+            "<a href = 'edit?id={$row['id']}'>Edit Post</a>&emsp;".
+            "<a href = 'delete?id={$row['id']}'>"."Delete Post"."</a>&emsp;";
             if($_SESSION['author_email'] == $row['published_by'])
-              echo "<a href = 'move_to_draft.php?id={$row['id']}'>"."Move to Draft"."</a>";
+              echo "<a href = 'move_draft?id={$row['id']}'>"."Move to Draft"."</a>";
             echo "</td>";
             echo "<td>".$row['category']."</td>";
             echo "<td>".$row['published_by']."</td>";

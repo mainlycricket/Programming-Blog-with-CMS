@@ -3,7 +3,7 @@
 session_start();
 
 if(isset($_SESSION['email'])) {
-    header('location: admin/index.php');
+    header('location: admin/');
     exit;
 }
 
@@ -114,7 +114,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <ul class="navbar-nav">
 
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                                    <a class="nav-link" aria-current="page" href="home">Home</a>
                                 </li>
 
                                 <?php
@@ -125,7 +125,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                             
                                             while($row = mysqli_fetch_array($category)) {
                                                 echo '<li class="nav-item">
-                                                <a class="nav-link" href="programs.php'.'?sub='.$row['category'].'">'.$row['category'].'</a>
+                                                <a class="nav-link" href="programs'.'?sub='.$row['category'].'">'.$row['category'].'</a>
                                             </li>';
                                             }
                             
@@ -142,7 +142,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <?php if(isset($_SESSION['author_email'])): ?>
                                         <a class="btn btn-danger" href="admin/"  role = "button">Dashboard</a>
                                     <?php else: ?>
-                                        <a class="btn btn-danger" href="login.php" role = "button">Log in</a>
+                                        <a class="btn btn-danger" href="login" role = "button">Log in</a>
                                         
                                     <?php endif; ?>
                                 </li>

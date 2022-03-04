@@ -3,7 +3,7 @@
   session_start();
 
   if(!isset($_SESSION['author_email'])) {
-    header('location:../login.php');
+    header('location:../login');
     exit;
   }
 
@@ -44,7 +44,7 @@
           </div>
 
           <div id = "logout">
-          <a href = "logout.php"><i class="fa fa-power-off" aria-hidden="true" style = "color: red;"></i></a>
+          <a href = "logout"><i class="fa fa-power-off" aria-hidden="true" style = "color: red;"></i></a>
           </div>
 
           <div id = "greetings">
@@ -97,8 +97,8 @@
                       echo "<tr scope = 'row'>";
                       echo "<td>".$row['id']."</td>";
                       echo "<td>".$row['title']."<br/>".
-                      "<a href = 'edit_post.php?id={$row['id']}'>Edit Post</a>&emsp;".
-                      "<a href = 'delete_post.php?id={$row['id']}'>"."Delete Post"."</a>".
+                      "<a href = 'edit?id={$row['id']}'>Edit Post</a>&emsp;".
+                      "<a href = 'delete?id={$row['id']}'>"."Delete Post"."</a>".
                       "</td>";
                       echo "<td>".$row['category']."</td>";
                       echo "<td>".$row['status']."</td>";

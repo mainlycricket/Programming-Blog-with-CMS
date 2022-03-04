@@ -64,7 +64,7 @@
 
             if(mysqli_query($conn, $update_sql)) {
                 echo "Post Updated";
-                header('location: published_posts.php');
+                header('location: published');
             }
 
             else
@@ -114,7 +114,7 @@
       
           if(mysqli_query($conn, $sql)) {
             echo "Post Published";
-            header('location:published_posts.php');
+            header('location:published');
           }
       
           else
@@ -155,7 +155,7 @@
     
         if(mysqli_query($conn, $sql)) {
           echo "Draft Updated";
-          header('location:draft_posts.php');
+          header('location:drafts');
         }
     
         else
@@ -197,7 +197,7 @@
     
         if(mysqli_query($conn, $sql)) {
           echo "Post Updated";
-          header('location:pending_posts.php');
+          header('location:pending');
         }
     
         else
@@ -233,7 +233,7 @@
       <div id = "h-nav">
 
         <div id = "dashboard-link">
-          <a href = "index.php" class="btn btn-dark" role = "button">Dashboard</a>
+          <a href = "dashboard" class="btn btn-dark" role = "button">Dashboard</a>
         </div>
 
         <div id = "greetings">

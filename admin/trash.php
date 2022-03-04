@@ -3,7 +3,7 @@
   session_start();
 
   if(!isset($_SESSION['author_email'])) {
-    header('location:../login.php');
+    header('location:../login');
     exit;
   }
 
@@ -20,7 +20,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href = "../AdminCSS/dashboard.css" rel = "stylesheet" type = "text/css" />
+    <link href = "../admin-css/dashboard.css" rel = "stylesheet" type = "text/css" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -42,7 +42,7 @@
           </div>
 
           <div id = "logout">
-          <a href = "logout.php"><i class="fa fa-power-off" aria-hidden="true" style = "color: red;"></i></a>
+          <a href = "logout"><i class="fa fa-power-off" aria-hidden="true" style = "color: red;"></i></a>
           </div>
 
           <div id = "greetings">
@@ -91,7 +91,8 @@
                       echo "<tr scope = 'row'>";
                       echo "<td>".$row['id']."</td>";
                       echo "<td>".$row['title']."<br/>".
-                      "<a href = 'restore_post.php?id={$row['id']}'>Restore Post</a>&emsp;".
+                      "<a href = 'restore?id={$row['id']}'>Restore Post</a>&emsp;".
+                      "<span style='color: red; cursor: pointer; text-decoration: underline;' onclick='ask_delete({$row["id"]})'>Delete Permanently</span>&emsp;".
                       "</td>";
                       echo "<td>".$row['category']."</td>";
                       echo "<td>".$row['deleted_at']."</td>";
@@ -124,8 +125,17 @@
 
     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
 
+    <script>
+      function ask_delete(x) {
+        let response = confirm("Do you want to delete this post?");
+        if(response) {
+          location.href = `delete_permanently?id=${x}`;
+        }
+      }
+    </script>
+
     <script type = "text/javascript" src = "icon.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
    

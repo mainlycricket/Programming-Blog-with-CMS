@@ -3,12 +3,12 @@
 session_start();
 
 if(!isset($_SESSION['author_email'])) {
-  header('location:../login.php');
+  header('location:../login');
   exit;
 }
 
 else if($_SESSION['author_role'] != 'admin') {
-  header('location:index.php');
+  header('location:dashboard');
   exit;
 }
 
@@ -83,7 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if(mysqli_query($conn, $sql)) {
             echo "Category Added";
-            header('location:index.php');
+            header('location:dashboard');
         }
 
         else

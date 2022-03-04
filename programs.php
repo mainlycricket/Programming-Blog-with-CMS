@@ -7,7 +7,7 @@
     $subject = $_GET['sub'];
 
     if (!isset($subject))
-      header("location: index.php");
+      header("location: home");
 
 ?>
 
@@ -56,7 +56,7 @@
                 <ul class="navbar-nav">
 
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link" aria-current="page" href="home">Home</a>
                   </li>
 
                     <?php
@@ -67,7 +67,7 @@
                                 
                                 while($row = mysqli_fetch_array($category)) {
                                     echo '<li class="nav-item">
-                                            <a href="programs.php'.'?sub='.$row['category'].'"'."class = 'nav-link ";
+                                            <a href="programs'.'?sub='.$row['category'].'"'."class = 'nav-link ";
                                         if($subject == $row['category']) {
                                           echo "active";}
                                         echo "'>".$row['category']."</a>
@@ -88,7 +88,7 @@
                     <?php if(isset($_SESSION['author_email'])): ?>
                       <a class="btn btn-danger" href="admin/"  role = "button">Dashboard</a>
                     <?php else: ?>
-                    <a class="btn btn-danger" href="login.php" role = "button">Log in</a>        
+                    <a class="btn btn-danger" href="login" role = "button">Log in</a>        
                     <?php endif; ?>
                   </li>
 

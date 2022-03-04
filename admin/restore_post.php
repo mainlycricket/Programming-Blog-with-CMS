@@ -35,7 +35,7 @@
     if($post = mysqli_query($conn, $sql_restore)) {
         
         echo "Post Restored";
-        header('location: index.php');
+        header('location: dashboard');
 
     }
 

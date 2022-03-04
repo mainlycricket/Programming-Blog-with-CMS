@@ -3,7 +3,7 @@
 session_start();
 
 if(!isset($_SESSION['author_email'])) {
-  header('location:../login.php');
+  header('location:../login');
   exit;
 }
 
@@ -41,7 +41,7 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['submit'] == 'Publish Post'
 
     if(mysqli_query($conn, $sql)) {
       echo "Post Published";
-      header('location:published_posts.php');
+      header('location:published');
     }
 
     else
@@ -79,7 +79,7 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['submit'] == 'Save Draft'))
 
     if(mysqli_query($conn, $sql)) {
       echo "Draft Saved";
-      header('location: draft_posts.php');
+      header('location: drafts');
     }
 
     else
@@ -117,7 +117,7 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['submit'] == 'Submit Post')
 
     if(mysqli_query($conn, $sql)) {
       echo "Post Submitted";
-      header('location:pending_posts.php');
+      header('location:pending');
     }
 
     else
@@ -153,7 +153,7 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['submit'] == 'Submit Post')
       <div id = "h-nav">
 
         <div id = "dashboard-link">
-          <a href = "index.php" class="btn btn-dark" role = "button">Dashboard</a>
+          <a href = "dashboard" class="btn btn-dark" role = "button">Dashboard</a>
         </div>
 
         <div id = "greetings">
