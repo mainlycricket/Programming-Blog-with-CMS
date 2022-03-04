@@ -34,9 +34,15 @@ The authors can also save drafts and edit them later.
 
 The admin can edit and delete any post, while the contributors can edit and delete only their posts.
 
-The one who deletes a post can retrieve it to its previous state. Also, the contributors can move their submitted posts to drafts.
+The one who deletes a post can retrieve it to its previous state or delete it permanently. Also, the contributors can move their submitted posts to drafts.
 
 The admin panel can be viewed in <a href = "https://twitter.com/mainly_coding/status/1474402482876866563?s=20" target = "_blank">this Twitter thread.</a>
+</p>
+
+<h3>Plugin</h3>
+
+<p>
+  We have used <b><a href="https://ckeditor.com/ckeditor-4/">CKEditor</a></b> as a plugin for an editor interface to be used while adding a new post or editing an existing one in the admin panel. 
 </p>
 
 <h3>Team</h3>
@@ -44,7 +50,7 @@ The admin panel can be viewed in <a href = "https://twitter.com/mainly_coding/st
 <p>
 I have managed and developed the entire admin panel as well as the database part.
 
-As this is a college project, two friends of mine - Aman Katiyar and Vinay Kumar Vishwakarma - contributed as well. They designed the beautiful home page, including the footer, and the login page.
+As this is a college project, two friends of mine - [Aman Katiyar](https://github.com/AmanKtyr) and [Vinay Kumar Vishwakarma](https://github.com/DarkVinay) - contributed as well. They designed the beautiful home page, including the footer, and the login page.
 
-I'm also thankful to <a href = "https://github.com/anujsahujuly2002-dev" target = "_blank">Mr. Anuj Kumar Sahu</a> for his valuable inputs as times.
+I'm also thankful to <a href = "https://github.com/anujsahujuly2002-dev" target = "_blank">Mr. Anuj Kumar Sahu</a> for his valuable inputs at times.
 </p>
