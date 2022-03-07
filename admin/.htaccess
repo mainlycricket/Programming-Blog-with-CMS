@@ -11,11 +11,11 @@ RewriteRule ^(pending)$ pending_posts.php
 RewriteRule ^(drafts)$ draft_posts.php
 RewriteRule ^(trash)$ trash.php
 RewriteRule ^(add_author)$ add_writer.php
-RewriteRule ^(add_subject)$ add_subject.php
+RewriteRule ^(add_subject)$ add_category.php
 RewriteRule ^(logout)$ logout.php
 RewriteRule ^(login)$ login.php
 
-RewriteRule ^(edit)$ edit_Post.php
+RewriteRule ^(edit)$ edit_post.php
 RewriteRule ^(delete)$ delete_post.php
 RewriteRule ^(restore)$ restore_post.php
 RewriteRule ^(move_draft)$ move_to_draft.php
